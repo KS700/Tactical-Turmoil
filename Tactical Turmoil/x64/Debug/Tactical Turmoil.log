@@ -1,4 +1,4 @@
 ﻿  Tactical Turmoil.cpp
-C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Tactical Turmoil.cpp(242,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Tactical Turmoil.cpp(82,1): warning C4715: 'checkWin': not all control paths return a value
+C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Tactical Turmoil.cpp(50,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Tactical Turmoil.cpp(284,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Tactical Turmoil.vcxproj -> C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\x64\Debug\Tactical Turmoil.exe

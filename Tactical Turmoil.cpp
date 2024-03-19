@@ -8,6 +8,10 @@
 #include <fstream>
 #include <time.h>
 #include <string>
+#include <algorithm>
+#include <thread>
+#include <chrono>
+#include <iomanip>
 
 using namespace std;
 
@@ -21,11 +25,11 @@ const int HARD_ROWS = 16;
 const int HARD_COLS = 16;
 const int HARD_BOMBS = 40;
 
-const int VERY_HARD_ROWS = 16;
-const int VERY_HARD_COLS = 40;
-const int VERY_HARD_BOMBS = 99;
+const int VERY_HARD_ROWS = 30;
+const int VERY_HARD_COLS = 30;
+const int VERY_HARD_BOMBS = 180;
 
-// Struct-------------------------------------------------------------------------------------------------------------------------------
+// Struct------------------------ADD more classes/structs-------------------------------------------------------------------------------------------------------
 struct Square {
     bool bomb;
     bool revealed;
@@ -33,15 +37,27 @@ struct Square {
     int bombsNearby;
 };
 
+// Function to update the scoreboard-------------------------------------------Record diffculty as well------------------------------------------
+void updateScoreboard(vector<pair<string, int>>& scoreboard, const string& name, int score) {
+    scoreboard.push_back(make_pair(name, score));
+    sort(scoreboard.begin(), scoreboard.end(), [](const pair<string, int>& a, const pair<string, int>& b) {
+        return a.second > b.second;
+        });
+}
+
 // Display the selected board size
 void printBoard(const vector<vector<Square>>& board, int numBombs, int numFlags) {
+    int width = to_string(board[0].size() - 1).size(); // Calculate the width dynamically based on the number of columns
     cout << "   ";
+    if (board.size() > EASY_ROWS || board[0].size() > EASY_COLS) {
+        cout << " "; // Extra space before the first column number for larger boards
+    }
     for (int col = 0; col < board[0].size(); col++) {
-        cout << col << " ";
+        cout << setw(width) << col << " "; // Set the width dynamically
     }
     cout << endl;
     for (int row = 0; row < board.size(); row++) {
-        cout << row << " |";
+        cout << setw(width) << row << " |";
         for (int col = 0; col < board[row].size(); col++) {
             char c;
             if (!board[row][col].revealed) {
@@ -59,7 +75,7 @@ void printBoard(const vector<vector<Square>>& board, int numBombs, int numFlags)
             if (board[row][col].flagged) {
                 c = '#';
             }
-            cout << c << "|";
+            cout << setw(width) << c << "|"; // Set the width dynamically
         }
         cout << endl;
     }
@@ -67,7 +83,7 @@ void printBoard(const vector<vector<Square>>& board, int numBombs, int numFlags)
 
 // Check if the player has beat the game
 bool checkWin(const vector<vector<Square>>& board, int numBombs) {
-    int numFlags = 0;
+    unsigned int numFlags = 0;
     for (int row = 0; row < board.size(); row++) {
         for (int col = 0; col < board[row].size(); col++) {
             if (!board[row][col].revealed && !board[row][col].flagged) {
@@ -76,11 +92,12 @@ bool checkWin(const vector<vector<Square>>& board, int numBombs) {
             if (board[row][col].flagged) {
                 numFlags++;
             }
-        }
-        return true;
+        } 
     }
+    return true;
 }
 
+// Reveal the board at the end of a game
 void revealAll(vector<vector<Square>>& board) {
     for (int row = 0; row < board.size(); row++) {
         for (int col = 0; col < board[row].size(); col++) {
@@ -118,7 +135,8 @@ bool revealSquares(vector<vector<Square>>& board, int row, int col) {
     square.revealed = true;
     if (square.bomb) {
         bombsRemaining = bombsRemaining - 1;
-        cout << "KABOOM\n";
+        system("cls");
+        cout << "******KABOOM******\n";
         return true;
     }
     if (square.bombsNearby > 0) {
@@ -142,6 +160,7 @@ bool revealSquares(vector<vector<Square>>& board, int row, int col) {
 }
 
 // Decrease the bomb counter and change the square to be flagged when a flag is placed
+    // Game breaking "feature" -> Flag a bomb and the number decreases, you can flag every tile to find them--------------------------------------------------
 void insertFlag(vector<vector<Square>>& board, int row, int col) {
     Square& square = board[row][col];
     if (!square.revealed) {
@@ -154,7 +173,8 @@ void insertFlag(vector<vector<Square>>& board, int row, int col) {
 
 // Initialize the board size
 void initializeBoard(vector<vector<Square>>& board, int numBombs) {
-    int count = 0;
+    srand(static_cast<unsigned int>(time(nullptr))); // Seed the random number generator
+    signed int count = 0;
     while (count < numBombs) {
         int row = rand() % board.size();
         int col = rand() % board[row].size();
@@ -170,12 +190,35 @@ void initializeBoard(vector<vector<Square>>& board, int numBombs) {
     }
 }
 
-// Run the game?------------------------------------------------------------------------------------------------------------------------------
-void game(int rows, int cols, int numBombs) {
+
+// Function to handle user input
+void userInput(int& action, int& x, int& y) {
+    cout << "Choose an action:" << endl;
+    cout << "1. Choose a unit" << endl;
+    cout << "2. Insert a flag" << endl;
+    cin >> action;
+    cout << "Enter the coordinates of the square (row): ";
+    cin >> x;
+    cout << "Enter the coordinates of the square (column): ";
+    cin >> y;
+}
+
+// Display and make a scoreboard-------------------------------------------------------------------------------------------------------------------
+void displayScoreboard(const vector<pair<string, int>>& scoreboard) {
+    cout << "Scoreboard:\n";
+    for (const auto& entry : scoreboard) {
+        cout << entry.first << ": " << entry.second << endl;
+    }
+}
+
+// Run the game
+void game(int rows, int cols, int numBombs, int& bombsRemaining, vector<pair<string, int>>& scoreboard, const string& name) {
     time_t start_time = time(nullptr);
+    bombsRemaining = numBombs;
     vector<vector<Square>> board(rows, vector<Square>(cols));
     initializeBoard(board, numBombs);
     bool gameOver = false;
+
     while (!gameOver) {
         system("cls");
         int numFlags = 0;
@@ -187,114 +230,133 @@ void game(int rows, int cols, int numBombs) {
             }
         }
         printBoard(board, numBombs, numFlags);
-        
+
         int x, y;
         int action;
-        
+
         cout << endl << "Bombs remaining: " << bombsRemaining << endl;
-        
+
         time_t end_time = time(nullptr);
-        
         double elapsed_time = difftime(end_time, start_time);
         cout << "Elapsed time: " << elapsed_time << " seconds\n";
-        cout << "Choose an action:" << endl;
-        cout << "1. Choose a unit" << endl;
-        cout << "2. Insert a flag" << endl;
-        cin >> action;
-        cout << "Enter the coordinates of the square (row): ";
-        cin >> x;
-        cout << "Enter the coordinates of the square (column): ";
-        cin >> y;
+
+        userInput(action, x, y);
+
         if (x < 0 || x >= board.size() || y < 0 || y >= board[x].size()) {
             cout << "Invalid coordinates. Please try again." << endl;
             continue;
         }
-        switch (action) {  //Need to check here why I am able to win by not beating the game---------------------------------------------------------
-        case(1): {
+
+        switch (action) {
+        case 1: {
             if (revealSquares(board, x, y)) {
                 gameOver = true;
                 cout << "YOU LOST THE GAME!" << endl;
+                updateScoreboard(scoreboard, name, 0);
             }
             else if (checkWin(board, numBombs)) {
                 gameOver = true;
-                cout << "YOU WIN THE GAME!" << endl;
+                system("cls");
+                cout << "*Congratulations*\nYOU WON THE GAME!" << endl;
+                updateScoreboard(scoreboard, name, static_cast<int>(elapsed_time));
             }
             break;
         }
-        case(2): {
-            {
-                insertFlag(board, x, y);
-            }
+        case 2: {
+            insertFlag(board, x, y);
             break;
         }
-        default:
-        {
+        default: {
             cout << "Invalid action. Please try again." << endl;
         }
         }
-
     }
-    revealAll(board); // Does not work currently-----------------------------------------------------------------------------------------------
+    revealAll(board); // Reveals all squares after the game ends
+    printBoard(board, numBombs, 0); // Print the final board with all squares revealed
+    cout << "Press Enter to return to the main menu...";
+    cin.ignore(); // Ignore any previous newline characters
+    cin.get(); // Wait for the user to press Enter
+    system("cls");
 }
 
 
 int main() {
     srand(time(0));
-    ofstream records("records.txt", ios_base::app);
+    vector<pair<string, int>> scoreboard;
     string name;
-    cout << "enter your name: ";
+    cout << "Enter your name: ";
     cin >> name;
     system("cls");
-    cout << "1.Start Game" << endl << "2.Quit" << endl << "3.Records" << endl << "4.Instructions" << endl;
-    int a, b;
-    string output;
-    cin >> a;
-    system("cls");
-    switch (a) {
-    case (1): {
-        cout << "1.Easy" << endl << "2.Hard" << endl << "3.Good Luck" << endl;
-        cin >> b;
-        switch (b) {
-        case (1): {
-            game(EASY_ROWS, EASY_COLS, EASY_BOMBS);
-            records << name << " " << bombsRemaining << "/" << 10 << endl;
-            records.close();
-            break;
-        }
-        case (2): {
-            bombsRemaining += 30;
-            game(HARD_ROWS, HARD_COLS, HARD_BOMBS);
-            records << name << " " << bombsRemaining << "/" << 40 << endl;
-            records.close();
-            break;
-        }
-        case (3): {
-            bombsRemaining += 89;
-            game(VERY_HARD_ROWS, VERY_HARD_COLS, VERY_HARD_BOMBS);
-            records << name << " " << bombsRemaining << "/" << 99 << endl;
-            records.close();
-            break;
-        }
-        }
-    }
-    case(2): {
-        return 0;
-        break;
-    }
-    case(3): {
+    int choice;
+    do {
+        cout << "1. Start Game" << endl
+             << "2. Instructions" << endl
+             << "3. Scoreboard" << endl
+             << "4. Quit Game" << endl;
+        cin >> choice;
         system("cls");
-        ifstream records("records.txt");
-        while (getline(records, output)) {
-            cout << output << endl;
+        switch (choice) {
+        case 1: {
+            int b;
+            cout << "1. Easy" << endl << "2. Hard" << endl << "3. Good Luck" << endl;
+            cin >> b;
+            string difficulty;
+            switch (b) {
+            case 1: {
+                difficulty = "E";
+                thread gameThread(game, EASY_ROWS, EASY_COLS, EASY_BOMBS, ref(bombsRemaining), ref(scoreboard), name);
+                gameThread.join();
+                break;
+            }
+            case 2: {
+                difficulty = "H";
+                thread gameThread2(game, HARD_ROWS, HARD_COLS, HARD_BOMBS, ref(bombsRemaining), ref(scoreboard), name);
+                gameThread2.join();
+                break;
+            }
+            case 3: {
+                difficulty = "GL";
+                thread gameThread3(game, VERY_HARD_ROWS, VERY_HARD_COLS, VERY_HARD_BOMBS, ref(bombsRemaining), ref(scoreboard), name);
+                gameThread3.join();
+                break;
+            }
+            }
+            break;
         }
-        break;
-    }
-    //case(4): {
-    //    system("cls");
-    //    ifstream instructions(".txt");
-    //       // Case 4 for Instructions-------------------------------------------------------------------------------------------------------
-    //       // Use Pointer to Name given and say "Hi .... Here are the instructions for Tactical Turmoil"
-    //}
-    }
-}
+        case 2: { //Need to write detailed instructions-------------------------------------------------------------------------------------------------------
+                  //Pointer to username for Welcome instructions vvvvv
+            system("cls");
+            cout << "Welcome to Tactical Turmoil, *NAME HERE*!" << endl;
+            cout << "Instructions:" << endl;
+            cout << "You are presented with a grid of squares. Some squares contain bombs (the 'mines')." << endl;
+            cout << "Your goal is to uncover all squares that do not contain bombs." << endl;
+            cout << "You can select a square by entering its row and column coordinates." << endl;
+            cout << "If you uncover a square containing a bomb, you lose the game." << endl;
+            cout << "If you uncover all safe squares without detonating any bombs, you win the game." << endl;
+            cout << "You can also insert flags on suspected bomb squares to help keep track." << endl;
+            cout << "Choose your difficulty level and start playing!" << endl;
+            cout << "\nPress Enter to return to the main menu..." << endl;
+            cin.ignore(); 
+            cin.get();
+            system("cls");
+            break;
+        }
+        case 3: { //Scoreboard needs units an difficulty--------Seconds (E)---------------------------------------------------------------------------------------------------------------
+            system("cls");
+            displayScoreboard(scoreboard);
+            cout << "\nPress Enter to return to the main menu..." << endl;
+            cin.ignore();
+            cin.get();
+            system("cls");
+            break;
+        }
+        case 4: {
+            return 0;
+        }
+        default:
+            cout << "Invalid choice. Please try again." << endl;
+        }
+    } while (choice != 4);
 
+    return 0;
+}
