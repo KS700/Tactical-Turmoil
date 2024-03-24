@@ -37,14 +37,6 @@ struct Square {
     int bombsNearby;
 };
 
-// Function to update the scoreboard-------------------------------------------Record diffculty as well------------------------------------------
-void updateScoreboard(vector<pair<string, int>>& scoreboard, const string& name, int score) {
-    scoreboard.push_back(make_pair(name, score));
-    sort(scoreboard.begin(), scoreboard.end(), [](const pair<string, int>& a, const pair<string, int>& b) {
-        return a.second > b.second;
-        });
-}
-
 // Display the selected board size
 void printBoard(const vector<vector<Square>>& board, int numBombs, int numFlags) {
     int width = to_string(board[0].size() - 1).size(); // Calculate the width dynamically based on the number of columns
@@ -83,18 +75,15 @@ void printBoard(const vector<vector<Square>>& board, int numBombs, int numFlags)
 
 // Check if the player has beat the game
 bool checkWin(const vector<vector<Square>>& board, int numBombs) {
-    unsigned int numFlags = 0;
+    int unrevealedSafeSquares = 0;
     for (int row = 0; row < board.size(); row++) {
         for (int col = 0; col < board[row].size(); col++) {
-            if (!board[row][col].revealed && !board[row][col].flagged) {
-                return false;
+            if (!board[row][col].revealed && !board[row][col].bomb) {
+                unrevealedSafeSquares++;
             }
-            if (board[row][col].flagged) {
-                numFlags++;
-            }
-        } 
+        }
     }
-    return true;
+    return unrevealedSafeSquares == 0;
 }
 
 // Reveal the board at the end of a game
@@ -203,16 +192,24 @@ void userInput(int& action, int& x, int& y) {
     cin >> y;
 }
 
-// Display and make a scoreboard-------------------------------------------------------------------------------------------------------------------
-void displayScoreboard(const vector<pair<string, int>>& scoreboard) {
+// Function to update the scoreboard-------------------------------------------Record diffculty as well------------------------------------------
+void updateScoreboard(vector<tuple<string, int, string>>& scoreboard, const string& name, int score, const string& difficulty) {
+    scoreboard.push_back(make_tuple(name, score, difficulty));
+    sort(scoreboard.begin(), scoreboard.end(), [](const tuple<string, int, string>& a, const tuple<string, int, string>& b) {
+        return get<1>(a) > get<1>(b);
+        });
+}
+
+// Display the scoreboard with difficulty
+void displayScoreboard(const vector<tuple<string, int, string>>& scoreboard) {
     cout << "Scoreboard:\n";
     for (const auto& entry : scoreboard) {
-        cout << entry.first << ": " << entry.second << endl;
+        cout << get<0>(entry) << ": " << get<1>(entry) << " (" << get<2>(entry) << ")" << endl;
     }
 }
 
 // Run the game
-void game(int rows, int cols, int numBombs, int& bombsRemaining, vector<pair<string, int>>& scoreboard, const string& name) {
+void game(int rows, int cols, int numBombs, int& bombsRemaining, vector<tuple<string, int, string>>& scoreboard, const string& name, const string& difficulty) {
     time_t start_time = time(nullptr);
     bombsRemaining = numBombs;
     vector<vector<Square>> board(rows, vector<Square>(cols));
@@ -252,13 +249,13 @@ void game(int rows, int cols, int numBombs, int& bombsRemaining, vector<pair<str
             if (revealSquares(board, x, y)) {
                 gameOver = true;
                 cout << "YOU LOST THE GAME!" << endl;
-                updateScoreboard(scoreboard, name, 0);
+                updateScoreboard(scoreboard, name, 0, difficulty);
             }
             else if (checkWin(board, numBombs)) {
                 gameOver = true;
                 system("cls");
                 cout << "*Congratulations*\nYOU WON THE GAME!" << endl;
-                updateScoreboard(scoreboard, name, static_cast<int>(elapsed_time));
+                updateScoreboard(scoreboard, name, 1800 - static_cast<int>(elapsed_time), difficulty);
             }
             break;
         }
@@ -282,10 +279,11 @@ void game(int rows, int cols, int numBombs, int& bombsRemaining, vector<pair<str
 
 int main() {
     srand(time(0));
-    vector<pair<string, int>> scoreboard;
+    vector<tuple<string, int, string>> scoreboard;
     string name;
     cout << "Enter your name: ";
     cin >> name;
+    string* playerName = &name;
     system("cls");
     int choice;
     do {
@@ -304,19 +302,19 @@ int main() {
             switch (b) {
             case 1: {
                 difficulty = "E";
-                thread gameThread(game, EASY_ROWS, EASY_COLS, EASY_BOMBS, ref(bombsRemaining), ref(scoreboard), name);
+                thread gameThread(game, EASY_ROWS, EASY_COLS, EASY_BOMBS, ref(bombsRemaining), ref(scoreboard), name, difficulty);
                 gameThread.join();
                 break;
             }
             case 2: {
                 difficulty = "H";
-                thread gameThread2(game, HARD_ROWS, HARD_COLS, HARD_BOMBS, ref(bombsRemaining), ref(scoreboard), name);
+                thread gameThread2(game, HARD_ROWS, HARD_COLS, HARD_BOMBS, ref(bombsRemaining), ref(scoreboard), name, difficulty);
                 gameThread2.join();
                 break;
             }
             case 3: {
                 difficulty = "GL";
-                thread gameThread3(game, VERY_HARD_ROWS, VERY_HARD_COLS, VERY_HARD_BOMBS, ref(bombsRemaining), ref(scoreboard), name);
+                thread gameThread3(game, VERY_HARD_ROWS, VERY_HARD_COLS, VERY_HARD_BOMBS, ref(bombsRemaining), ref(scoreboard), name, difficulty);
                 gameThread3.join();
                 break;
             }
@@ -326,7 +324,7 @@ int main() {
         case 2: { //Need to write detailed instructions-------------------------------------------------------------------------------------------------------
                   //Pointer to username for Welcome instructions vvvvv
             system("cls");
-            cout << "Welcome to Tactical Turmoil, *NAME HERE*!" << endl;
+             cout << "Welcome to Tactical Turmoil, " << *playerName << "!" << endl;
             cout << "Instructions:" << endl;
             cout << "You are presented with a grid of squares. Some squares contain bombs (the 'mines')." << endl;
             cout << "Your goal is to uncover all squares that do not contain bombs." << endl;
