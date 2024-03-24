@@ -40,10 +40,26 @@ int main() {
         switch (choice) {
         case 1: {
             int b;
-            std::cout << "1. Easy" << std::endl << "2. Hard" << std::endl << "3. Good Luck" << std::endl;
-            std::cin >> b;
             std::string difficulty;
             int rows, cols, numBombs; // Define rows, cols, and numBombs variables
+            do {
+                std::cout << "1. Easy\n2. Hard\n3. Good Luck\n";
+                std::cin >> b;
+                if (std::cin.fail()) {
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    system("cls");
+                    std::cout << "Invalid input. Please enter a number.\n";
+                }
+                else if (b < 1 || b > 3) {
+                    system("cls");
+                    std::cout << "Invalid difficulty level. Please enter a number between 1 and 3.\n";
+                }
+                else {
+                    break; // Valid input received, exit the loop
+                }
+            } while (true);
+
             switch (b) {
             case 1: {
                 difficulty = "E";
