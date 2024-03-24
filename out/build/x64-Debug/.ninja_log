@@ -1,0 +1,35 @@
+# ninja log v5
+7	108	7330126462270501	CMakeFiles/Tactical.dir/Player.cpp.obj.ddi	248dce741ed9966a
+5	112	7330126462295510	CMakeFiles/Tactical.dir/Functions.cpp.obj.ddi	ce80ed1e3dbf8f05
+3	115	7330126462330505	CMakeFiles/Tactical.dir/GameBoard.cpp.obj.ddi	615068f4910e5b43
+1	115	7330126462340503	CMakeFiles/Tactical.dir/Main.cpp.obj.ddi	24a1f2fea3190f76
+115	150	7330126462707249	CMakeFiles/Tactical.dir/CXX.dd	ffe130d32092caa2
+115	150	7330126462707249	C:/Users/Kasco/OneDrive/Documents/C++/Separated Game/out/build/x64-Debug/CMakeFiles/Tactical.dir/CXXModules.json	ffe130d32092caa2
+115	150	7330126462707249	CMakeFiles/Tactical.dir/Main.cpp.obj.modmap	ffe130d32092caa2
+115	150	7330126462707249	CMakeFiles/Tactical.dir/GameBoard.cpp.obj.modmap	ffe130d32092caa2
+115	150	7330126462707249	CMakeFiles/Tactical.dir/Functions.cpp.obj.modmap	ffe130d32092caa2
+115	150	7330126462707249	CMakeFiles/Tactical.dir/Player.cpp.obj.modmap	ffe130d32092caa2
+159	697	7330126468157918	CMakeFiles/Tactical.dir/Player.cpp.obj	5fad3a20d4f22814
+154	840	7330126469568627	CMakeFiles/Tactical.dir/Main.cpp.obj	3e881c7245fc85b9
+12	120	7330129508886894	CMakeFiles/Tactical.dir/GameBoard.cpp.obj.ddi	615068f4910e5b43
+10	123	7330129508926892	CMakeFiles/Tactical.dir/Main.cpp.obj.ddi	24a1f2fea3190f76
+14	130	7330129508986974	CMakeFiles/Tactical.dir/Functions.cpp.obj.ddi	ce80ed1e3dbf8f05
+130	151	7330129509207140	CMakeFiles/Tactical.dir/CXX.dd	ffe130d32092caa2
+130	151	7330129509207140	C:/Users/Kasco/OneDrive/Documents/C++/Separated Game/out/build/x64-Debug/CMakeFiles/Tactical.dir/CXXModules.json	ffe130d32092caa2
+130	151	7330129509207140	CMakeFiles/Tactical.dir/Main.cpp.obj.modmap	ffe130d32092caa2
+130	151	7330129509207140	CMakeFiles/Tactical.dir/GameBoard.cpp.obj.modmap	ffe130d32092caa2
+130	151	7330129509207140	CMakeFiles/Tactical.dir/Functions.cpp.obj.modmap	ffe130d32092caa2
+130	151	7330129509207140	CMakeFiles/Tactical.dir/Player.cpp.obj.modmap	ffe130d32092caa2
+153	851	7330129516195715	CMakeFiles/Tactical.dir/GameBoard.cpp.obj	98a07f078e78f183
+155	908	7330129516771477	CMakeFiles/Tactical.dir/Functions.cpp.obj	a5a460e512103cdb
+152	956	7330129517236694	CMakeFiles/Tactical.dir/Main.cpp.obj	3e881c7245fc85b9
+957	1133	7330129518890406	Tactical.exe	71850aaaeeb2488c
+9	84	7330131230959468	CMakeFiles/Tactical.dir/Main.cpp.obj.ddi	24a1f2fea3190f76
+84	106	7330131231184587	CMakeFiles/Tactical.dir/CXX.dd	ffe130d32092caa2
+84	106	7330131231184587	C:/Users/Kasco/OneDrive/Documents/C++/Separated Game/out/build/x64-Debug/CMakeFiles/Tactical.dir/CXXModules.json	ffe130d32092caa2
+84	106	7330131231184587	CMakeFiles/Tactical.dir/Main.cpp.obj.modmap	ffe130d32092caa2
+84	106	7330131231184587	CMakeFiles/Tactical.dir/GameBoard.cpp.obj.modmap	ffe130d32092caa2
+84	106	7330131231184587	CMakeFiles/Tactical.dir/Functions.cpp.obj.modmap	ffe130d32092caa2
+84	106	7330131231184587	CMakeFiles/Tactical.dir/Player.cpp.obj.modmap	ffe130d32092caa2
+107	662	7330131236716809	CMakeFiles/Tactical.dir/Main.cpp.obj	3e881c7245fc85b9
+662	744	7330131237364994	Tactical.exe	71850aaaeeb2488c

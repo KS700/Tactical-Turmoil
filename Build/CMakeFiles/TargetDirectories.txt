@@ -1,0 +1,3 @@
+C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/Tactical.dir
+C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/ZERO_CHECK.dir
