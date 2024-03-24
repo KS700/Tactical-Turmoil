@@ -1,12 +1,2 @@
-﻿  Building Custom Rule C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/CMakeLists.txt
-  Scanning sources for module dependencies...
-  GameBoard.cpp
-  Player.cpp
-  Functions.cpp
-  Main.cpp
-  Compiling...
-  Functions.cpp
-  Player.cpp
-  GameBoard.cpp
-  Main.cpp
+﻿  Scanning sources for module dependencies...
   Tactical.vcxproj -> C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Build\Debug\Tactical.exe
