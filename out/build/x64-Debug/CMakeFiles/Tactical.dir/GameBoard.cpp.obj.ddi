@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\Tactical.dir\\GameBoard.cpp.obj",
+            "outputs": [
+                "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\out\\build\\x64-Debug\\vc140.pdb",
+                "CMakeFiles\\Tactical.dir\\GameBoard.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

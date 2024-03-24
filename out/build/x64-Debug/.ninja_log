@@ -1,0 +1,14 @@
+# ninja log v5
+8	72	7330184614066963	CMakeFiles/Tactical.dir/Player.cpp.obj.ddi	39fb9ff3e7d5aeae
+5	78	7330184614126092	CMakeFiles/Tactical.dir/GameBoard.cpp.obj.ddi	e71b7c706e82a671
+6	79	7330184614146191	CMakeFiles/Tactical.dir/Functions.cpp.obj.ddi	33da3e1c60cfc5f2
+3	83	7330184614180646	CMakeFiles/Tactical.dir/Main.cpp.obj.ddi	da52c94cf754e010
+83	117	7330184614532412	CMakeFiles/Tactical.dir/CXX.dd	ffe130d32092caa2
+83	117	7330184614532412	C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/out/build/x64-Debug/CMakeFiles/Tactical.dir/CXXModules.json	ffe130d32092caa2
+83	117	7330184614532412	CMakeFiles/Tactical.dir/Main.cpp.obj.modmap	ffe130d32092caa2
+83	117	7330184614532412	CMakeFiles/Tactical.dir/GameBoard.cpp.obj.modmap	ffe130d32092caa2
+83	117	7330184614532412	CMakeFiles/Tactical.dir/Functions.cpp.obj.modmap	ffe130d32092caa2
+83	117	7330184614532412	CMakeFiles/Tactical.dir/Player.cpp.obj.modmap	ffe130d32092caa2
+123	456	7330184617890252	CMakeFiles/Tactical.dir/Player.cpp.obj	120236c226fc2a06
+120	519	7330184618536706	CMakeFiles/Tactical.dir/GameBoard.cpp.obj	d0f57eff0ea82873
+121	572	7330184619056587	CMakeFiles/Tactical.dir/Functions.cpp.obj	cfb92f667ed66067

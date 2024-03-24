@@ -13,6 +13,9 @@
     <ClCompile Include="C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\MenuFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\CMakeLists.txt" />

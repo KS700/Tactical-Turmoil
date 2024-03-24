@@ -337,6 +337,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ScanSourceForModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ScanSourceForModuleDependencies>
       <ScanSourceForModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ScanSourceForModuleDependencies>
     </ClCompile>
+    <ClCompile Include="C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\MenuFunctions.cpp">
+      <ScanSourceForModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ScanSourceForModuleDependencies>
+      <ScanSourceForModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ScanSourceForModuleDependencies>
+      <ScanSourceForModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ScanSourceForModuleDependencies>
+      <ScanSourceForModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ScanSourceForModuleDependencies>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Build\ZERO_CHECK.vcxproj">
