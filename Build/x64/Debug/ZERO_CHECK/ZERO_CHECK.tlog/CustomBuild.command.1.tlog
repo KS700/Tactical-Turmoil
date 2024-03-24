@@ -1,6 +1,6 @@
-^C:\USERS\KASCO\ONEDRIVE\DOCUMENTS\C++\SEPARATED GAME\BUILD\CMAKEFILES\41F62EE6E7116970329BBFD9AD92535D\GENERATE.STAMP.RULE
+^C:\USERS\KASCO\ONEDRIVE\DOCUMENTS\C++\TACTICAL TURMOIL\TACTICAL TURMOIL\BUILD\CMAKEFILES\12AE5F77ED1D14E55BD46E7BFDAB821A\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Kasco/OneDrive/Documents/C++/Separated Game" "-BC:/Users/Kasco/OneDrive/Documents/C++/Separated Game/Build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Kasco/OneDrive/Documents/C++/Separated Game/Build/Tactical_Turmoil.sln"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil" "-BC:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/Tactical_Turmoil.sln"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Kasco/OneDrive/Documents/C++/Separated Game
+# Install script for directory: C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
