@@ -1,7 +1,8 @@
 #ifndef SQUARE_H
 #define SQUARE_H
+#include "GameObject.h"
 
-class Square {
+class Square : public GameObject {
 public:
     bool bomb;
     bool revealed;

@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Tactical.dir\\Debug\\Square.obj",
+            "outputs": [
+                "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\Tactical.dir\\Debug\\vc143.pdb",
+                "Tactical.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}

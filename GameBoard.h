@@ -6,17 +6,11 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <array>
+#include "Square.h"
+#include "GameObject.h"
 
-class Square {
-public:
-    bool bomb;
-    bool revealed;
-    bool flagged;
-    int bombsNearby;
-    Square() : bomb(false), revealed(false), flagged(false), bombsNearby(0) {}
-};
-
-class GameBoard {
+class GameBoard : public GameObject {
 private:
     int rows;
     int cols;
@@ -49,12 +43,8 @@ public:
     // Getter method for number of bombs
     int getNumBombs() const;
 
-    // NEED ACUTAL VIRTUAL FUNCTIONS--------------------------------------------------------------------------------------------------------------------------
-    // Add virtual function to update the game state
-    virtual void update() {}
-
-    // Add virtual function to print the game menu
-    virtual void printMenu() const {}
+    // Virtual destructor------------------------------------------------------------------------------------------------------------
+    virtual ~GameBoard() {}
 };
 
 #endif // GAMEBOARD_H

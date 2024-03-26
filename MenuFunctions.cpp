@@ -4,8 +4,9 @@
 #include "MenuFunctions.h"
 
 int getMenuChoice() {
-    int choice;
+    signed int choice;
     while (true) {
+        std::cout << "1. Start Game" << std::endl << "2. Instructions" << std::endl << "3. Scoreboard" << std::endl << "4. Quit Game" << std::endl;
         std::cout << "\nEnter your choice: ";
         std::cin >> choice;
         if (std::cin.fail() || choice < 1 || choice > 4) {

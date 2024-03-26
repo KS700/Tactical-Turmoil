@@ -23,16 +23,18 @@ void GameBoard::initializeBoard(int numBombs) {
 }
 
 int GameBoard::countBombsNearby(int row, int col) {
+    auto isValidPosition = [this](int r, int c) {           //Lambda Function----------------------------------------------------------------------
+        return r >= 0 && r < rows && c >= 0 && c < cols;
+        };
+
     const int dr[8] = { -1, -1, -1, 0, 0, 1, 1, 1 };
     const int dc[8] = { -1, 0, 1, -1, 1, -1, 0, 1 };
     int count = 0;
     for (int i = 0; i < 8; i++) {
         int r = row + dr[i];
         int c = col + dc[i];
-        if (r >= 0 && r < rows && c >= 0 && c < cols) {
-            if (board[r][c].bomb) {
-                count++;
-            }
+        if (isValidPosition(r, c) && board[r][c].bomb) {
+            count++;
         }
     }
     return count;
@@ -108,8 +110,8 @@ bool GameBoard::revealSquares(int row, int col) {
     if (square.bombsNearby > 0) {
         return false;
     }
-    const int dr[8] = { -1, -1, -1, 0, 0, 1, 1, 1 };
-    const int dc[8] = { -1, 0, 1, -1, 1, -1, 0, 1 };
+    std::array<int, 8> dr = { -1, -1, -1, 0, 0, 1, 1, 1 };
+    std::array<int, 8> dc = { -1, 0, 1, -1, 1, -1, 0, 1 };
     for (int i = 0; i < 8; i++) {
         int r = row + dr[i];
         int c = col + dc[i];

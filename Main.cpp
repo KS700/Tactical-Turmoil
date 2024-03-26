@@ -3,22 +3,20 @@
 #include "GameBoard.h"
 #include "Functions.h"
 
+int bombsRemaining = 0;     // Global Variable
+
 int main() {
     srand(time(0));
     std::vector<std::tuple<std::string, int, std::string>> scoreboard;
     std::string name;
     std::cout << "Enter your name: ";
     std::getline(std::cin, name);
-    Player player(name);
+    std::string* namePtr = &name;   // Pointer to name
+    Player player(namePtr);
     system("cls");
     int choice;
-    int bombsRemaining = 0;
     std::string input;
     do {
-        std::cout << "1. Start Game" << std::endl
-            << "2. Instructions" << std::endl
-            << "3. Scoreboard" << std::endl
-            << "4. Quit Game" << std::endl;
         choice = getMenuChoice();
         system("cls");
         switch (choice) {

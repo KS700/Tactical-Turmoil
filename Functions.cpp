@@ -47,10 +47,11 @@ void userInput(int& action, int& x, int& y) {
 
 void updateScoreboard(std::vector<std::tuple<std::string, int, std::string>>& scoreboard, const std::string& name, int score, const std::string& difficulty) {
     scoreboard.push_back(std::make_tuple(name, score, difficulty));
-    std::sort(scoreboard.begin(), scoreboard.end(), [](const std::tuple<std::string, int, std::string>& a, const std::tuple<std::string, int, std::string>& b) {
+    std::sort(scoreboard.begin(), scoreboard.end(), [](const auto& a, const auto& b) {      //Lambda Function----------------------------------------------------------------------
         return std::get<1>(a) > std::get<1>(b);
-    });
+        });
 }
+
 
 void displayScoreboard(const std::vector<std::tuple<std::string, int, std::string>>& scoreboard) {
     std::cout << "Scoreboard:\n";
@@ -67,7 +68,7 @@ void game(int rows, int cols, int numBombs, int& bombsRemaining, std::vector<std
 
     while (!gameOver) {
         system("cls");
-        int numFlags = 0;
+        float numFlags = 0;
         gameBoard.printBoard(numFlags);
 
         int x, y;
@@ -91,7 +92,7 @@ void game(int rows, int cols, int numBombs, int& bombsRemaining, std::vector<std
             if (gameBoard.revealSquares(x, y)) {
                 gameOver = true;
                 system("cls");
-                std::cout << "YOU LOST THE GAME!" << std::endl;
+                std::cout << "******KABOOM******\nYOU LOST THE GAME!" << std::endl;
                 updateScoreboard(scoreboard, name, 0, difficulty);
             }
             else if (gameBoard.checkWin()) {

@@ -7,3 +7,7 @@ build CMakeFiles\Tactical.dir\Functions.cpp.obj: dyndep
 
 build CMakeFiles\Tactical.dir\Player.cpp.obj: dyndep
 
+build CMakeFiles\Tactical.dir\MenuFunctions.cpp.obj: dyndep
+
+build CMakeFiles\Tactical.dir\Square.cpp.obj: dyndep
+
