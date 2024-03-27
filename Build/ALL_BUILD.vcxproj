@@ -177,6 +177,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{3704EA07-3FA4-332D-B625-60BE80B60F2F}</Project>
       <Name>Tactical</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Build\Tactical_Turmoil.vcxproj">
+      <Project>{D8ED8682-F961-32DA-822D-54BCBE90B25F}</Project>
+      <Name>Tactical_Turmoil</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

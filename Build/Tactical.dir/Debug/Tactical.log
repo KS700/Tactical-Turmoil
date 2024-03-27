@@ -1,11 +1,5 @@
 ﻿  Scanning sources for module dependencies...
-  GameBoard.cpp
-  Functions.cpp
-  MenuFunctions.cpp
   Main.cpp
   Compiling...
-  Functions.cpp
-  MenuFunctions.cpp
   Main.cpp
-  GameBoard.cpp
-  Tactical.vcxproj -> C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Build\Debug\Tactical.exe
+  Tactical.vcxproj -> C:\Users\Kasco\OneDrive\Documents\C++\Tactical Turmoil\Tactical Turmoil\Build\Debug\Tactical.lib

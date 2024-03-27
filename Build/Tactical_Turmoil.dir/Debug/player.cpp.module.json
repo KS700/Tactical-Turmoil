@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Tactical_Turmoil.dir\\Debug\\Player.obj",
+            "outputs": [
+                "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\Tactical_Turmoil.dir\\Debug\\vc143.pdb",
+                "Tactical_Turmoil.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}

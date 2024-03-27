@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.9.5+33de0b227 for .NET Framework
-      Build started 3/24/2024 4:12:55 PM.
+      Build started 3/26/2024 7:57:51 PM.
       
       Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\3.29.0\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.30
+      Time Elapsed 00:00:00.31
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       MSBuild version 17.9.5+33de0b227 for .NET Framework
-      Build started 3/24/2024 4:12:55 PM.
+      Build started 3/26/2024 7:57:52 PM.
       
       Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\3.29.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-zzhftw"
-      binary: "C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-zzhftw"
+      source: "C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-nn1ppz"
+      binary: "C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-nn1ppz"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-zzhftw'
+        Change Dir: 'C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-nn1ppz'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_bbd89.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_31c4d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.9.5+33de0b227 for .NET Framework
-        Build started 3/24/2024 4:12:55 PM.
+        Build started 3/26/2024 7:57:52 PM.
         
-        Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-zzhftw\\cmTC_bbd89.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-nn1ppz\\cmTC_31c4d.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_bbd89.dir\\Debug\\".
+          Creating directory "cmTC_31c4d.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-zzhftw\\Debug\\".
-          Creating directory "cmTC_bbd89.dir\\Debug\\cmTC_bbd89.tlog\\".
+          Creating directory "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-nn1ppz\\Debug\\".
+          Creating directory "cmTC_31c4d.dir\\Debug\\cmTC_31c4d.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_bbd89.dir\\Debug\\cmTC_bbd89.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_bbd89.dir\\Debug\\cmTC_bbd89.tlog\\unsuccessfulbuild".
+          Creating "cmTC_31c4d.dir\\Debug\\cmTC_31c4d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_31c4d.dir\\Debug\\cmTC_31c4d.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bbd89.dir\\Debug\\\\" /Fd"cmTC_bbd89.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_31c4d.dir\\Debug\\\\" /Fd"cmTC_31c4d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33519 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bbd89.dir\\Debug\\\\" /Fd"cmTC_bbd89.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_31c4d.dir\\Debug\\\\" /Fd"cmTC_31c4d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-zzhftw\\Debug\\cmTC_bbd89.exe" /INCREMENTAL /ILK:"cmTC_bbd89.dir\\Debug\\cmTC_bbd89.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-zzhftw/Debug/cmTC_bbd89.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-zzhftw/Debug/cmTC_bbd89.lib" /MACHINE:X64  /machine:x64 cmTC_bbd89.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_bbd89.vcxproj -> C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-zzhftw\\Debug\\cmTC_bbd89.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-nn1ppz\\Debug\\cmTC_31c4d.exe" /INCREMENTAL /ILK:"cmTC_31c4d.dir\\Debug\\cmTC_31c4d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-nn1ppz/Debug/cmTC_31c4d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-nn1ppz/Debug/cmTC_31c4d.lib" /MACHINE:X64  /machine:x64 cmTC_31c4d.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_31c4d.vcxproj -> C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-nn1ppz\\Debug\\cmTC_31c4d.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_bbd89.dir\\Debug\\cmTC_bbd89.tlog\\unsuccessfulbuild".
-          Touching "cmTC_bbd89.dir\\Debug\\cmTC_bbd89.tlog\\cmTC_bbd89.lastbuildstate".
-        Done Building Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-zzhftw\\cmTC_bbd89.vcxproj" (default targets).
+          Deleting file "cmTC_31c4d.dir\\Debug\\cmTC_31c4d.tlog\\unsuccessfulbuild".
+          Touching "cmTC_31c4d.dir\\Debug\\cmTC_31c4d.tlog\\cmTC_31c4d.lastbuildstate".
+        Done Building Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-nn1ppz\\cmTC_31c4d.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.30
+        Time Elapsed 00:00:00.31
         
       exitCode: 0
   -
@@ -210,8 +210,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-6ihpa0"
-      binary: "C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-6ihpa0"
+      source: "C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-70enp5"
+      binary: "C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-70enp5"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -220,34 +220,34 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-6ihpa0'
+        Change Dir: 'C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-70enp5'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_464a5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_39935.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.9.5+33de0b227 for .NET Framework
-        Build started 3/24/2024 4:12:56 PM.
+        Build started 3/26/2024 7:57:53 PM.
         
-        Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-6ihpa0\\cmTC_464a5.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-70enp5\\cmTC_39935.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_464a5.dir\\Debug\\".
+          Creating directory "cmTC_39935.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-6ihpa0\\Debug\\".
-          Creating directory "cmTC_464a5.dir\\Debug\\cmTC_464a5.tlog\\".
+          Creating directory "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-70enp5\\Debug\\".
+          Creating directory "cmTC_39935.dir\\Debug\\cmTC_39935.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_464a5.dir\\Debug\\cmTC_464a5.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_464a5.dir\\Debug\\cmTC_464a5.tlog\\unsuccessfulbuild".
+          Creating "cmTC_39935.dir\\Debug\\cmTC_39935.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_39935.dir\\Debug\\cmTC_39935.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_464a5.dir\\Debug\\\\" /Fd"cmTC_464a5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_39935.dir\\Debug\\\\" /Fd"cmTC_39935.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33519 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_464a5.dir\\Debug\\\\" /Fd"cmTC_464a5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_39935.dir\\Debug\\\\" /Fd"cmTC_39935.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-6ihpa0\\Debug\\cmTC_464a5.exe" /INCREMENTAL /ILK:"cmTC_464a5.dir\\Debug\\cmTC_464a5.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-6ihpa0/Debug/cmTC_464a5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-6ihpa0/Debug/cmTC_464a5.lib" /MACHINE:X64  /machine:x64 cmTC_464a5.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_464a5.vcxproj -> C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-6ihpa0\\Debug\\cmTC_464a5.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-70enp5\\Debug\\cmTC_39935.exe" /INCREMENTAL /ILK:"cmTC_39935.dir\\Debug\\cmTC_39935.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-70enp5/Debug/cmTC_39935.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Kasco/OneDrive/Documents/C++/Tactical Turmoil/Tactical Turmoil/Build/CMakeFiles/CMakeScratch/TryCompile-70enp5/Debug/cmTC_39935.lib" /MACHINE:X64  /machine:x64 cmTC_39935.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_39935.vcxproj -> C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-70enp5\\Debug\\cmTC_39935.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_464a5.dir\\Debug\\cmTC_464a5.tlog\\unsuccessfulbuild".
-          Touching "cmTC_464a5.dir\\Debug\\cmTC_464a5.tlog\\cmTC_464a5.lastbuildstate".
-        Done Building Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-6ihpa0\\cmTC_464a5.vcxproj" (default targets).
+          Deleting file "cmTC_39935.dir\\Debug\\cmTC_39935.tlog\\unsuccessfulbuild".
+          Touching "cmTC_39935.dir\\Debug\\cmTC_39935.tlog\\cmTC_39935.lastbuildstate".
+        Done Building Project "C:\\Users\\Kasco\\OneDrive\\Documents\\C++\\Tactical Turmoil\\Tactical Turmoil\\Build\\CMakeFiles\\CMakeScratch\\TryCompile-70enp5\\cmTC_39935.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
