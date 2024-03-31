@@ -6,6 +6,7 @@
 int bombsRemaining = 0;                                                                     // Global Variable for tracking remaining bombs
 
 int main() {
+    srand(time(0));                                                                         // Seed the random number generator with the current time
     std::vector<std::tuple<std::string, int, std::string>> scoreboard;                      // Vector to store player scores
     std::string name;                                                                       // Variable to store the player's name
     std::cout << "Enter your name: ";

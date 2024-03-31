@@ -7,6 +7,8 @@ GameBoard::GameBoard(int rows, int cols, int numBombs) : rows(rows), cols(cols),
 
 // Initialize the game board
 void GameBoard::initializeBoard(int numBombs) {
+    // Seed random number generator (Different game boards)
+    srand(static_cast<unsigned int>(time(nullptr)));       
     int count = 0;
     
     // Randomly place bombs on the board
