@@ -10,40 +10,42 @@
 #include "Square.h"
 #include "GameObject.h"
 
+// GameBoard Class - Inheritance from GameObject
 class GameBoard : public GameObject {
 private:
-    int rows;
-    int cols;
-    int numBombs;
-    std::vector<std::vector<Square>> board;
+    int rows;                                   // Number of rows in the game board
+    int cols;                                   // Number of columns in the game board
+    int numBombs;                               // Number of bombs on the game board
+    std::vector<std::vector<Square>> board;     // 2D vector representing the game board
 public:
+    // Constructor to initialize the GameBoard
     GameBoard(int rows, int cols, int numBombs);
 
-    // Method to initialize the game board
+    // Initialize the game board
     void initializeBoard(int numBombs);
 
-    // Method to count bombs nearby a given square
+    // Count bombs nearby a given square
     int countBombsNearby(int row, int col);
 
-    // Method to print the game board
+    // Print the game board
     void printBoard(int numFlags);
 
-    // Method to check if the player has won the game
+    // Check if the player has won the game
     bool checkWin();
 
-    // Method to reveal all squares at the end of the game
+    // Reveal all squares at the end of the game
     void revealAll();
 
-    // Method to reveal squares recursively
+    // Reveal squares - including adjacent squares without bombs
     bool revealSquares(int row, int col);
 
-    // Method to insert or remove a flag on a square
+    // Insert or remove a flag on a square
     void insertFlag(int row, int col);
 
-    // Getter method for number of bombs
+    // Getter method to retrieve the number of bombs on the game board
     int getNumBombs() const;
 
-    // Virtual destructor------------------------------------------------------------------------------------------------------------
+    // Virtual destructor for proper cleanup of derived class objects
     virtual ~GameBoard() {}
 };
 

@@ -6,12 +6,12 @@ Player::Player(std::string* playerName) : username(playerName) {}
 // Destructor
 Player::~Player() {}
 
-// Member function to get the username
+// Function to get the username
 std::string Player::getName() const {
     return *username;
 }
 
-// Member function to display instructions
+// Function to display instructions
 void Player::displayInstructions() const {
     std::cout << "Welcome to Tactical Turmoil, " << *username << "!" << std::endl;
     std::cout << "Instructions:" << std::endl;

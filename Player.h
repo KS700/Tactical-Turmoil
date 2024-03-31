@@ -5,6 +5,7 @@
 #include <string>
 #include "GameObject.h"
 
+// Player Class - Inheritance from GameObject
  class Player : public GameObject {
  private:
      std::string* username; // Pointer to a string
