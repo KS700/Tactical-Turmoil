@@ -14,14 +14,15 @@ std::string Player::getName() const {
 // Function to display instructions
 void Player::displayInstructions() const {
     std::cout << "Welcome to Tactical Turmoil, " << *username << "!" << std::endl;
-    std::cout << "Instructions:" << std::endl;
-    std::cout << "You are presented with a grid of squares. Some squares contain bombs (the 'mines')." << std::endl;
-    std::cout << "Your goal is to uncover all squares that do not contain bombs." << std::endl;
-    std::cout << "You can select a square by entering its row and column coordinates." << std::endl;
-    std::cout << "If you uncover a square containing a bomb, you lose the game." << std::endl;
-    std::cout << "If you uncover all safe squares without detonating any bombs, you win the game." << std::endl;
-    std::cout << "You can also insert flags on suspected bomb squares to help keep track." << std::endl;
-    std::cout << "Choose your difficulty level and start playing!" << std::endl;
+    std::cout << "Here are the instructions that will get you out alive:\n" << std::endl;
+    std::cout << "1. Before starting a game, you will need to pick between 3 difficulties that\n   scale the size of the board and the total number of bombs you must avoid." << std::endl;
+    std::cout << "\n2. The board will be easily navigable due to numbered rows and columns,\n   and these numbers will be used as your inputs while playing." << std::endl;
+    std::cout << "\n3. To get started, you must pick a starting space on the board.\n   While this space is not always safe, trust your gut and you will be just fine." << std::endl;
+    std::cout << "\n4. To actually input the tile you would like to start on, enter the number (1) then follow the on screen instructions to enter\n   the row and column of your choice. To play quicker, you may enter your selections all in one line (Example input: 1 5 13)." << std::endl;
+    std::cout << "\n5. After your first tile is chosen, the board will be updated to show you what is around your space.\n   Clear tiles will be identified with (-) and any tiles that are within one block of a bomb in any direction will be\n   displayed with a number such as (1) or (3) which means there are that many bombs in the direct vicinity of that tile." << std::endl;
+    std::cout << "\n6. If you do not want to reassess the board after every turn, place a flag (#) on tiles that you suspect a bomb could be hiding.\n   To do this, enter the number (2) then follow the on screen instructions to enter the row and column of your choice.\n   To play quicker, the same rules apply as in Step 4 (Example input: 2 6 8)." << std::endl;
+    std::cout << "\n7. So, what happens if you accidentally select a bomb? KABOOM, your game is over.\n   You can win by navigating the entire board and uncovering every tile that is not hiding a bomb." << std::endl;
+    std::cout << "\nGood luck out there soldier!" << std::endl;
 }
 
 // Overloading the + operator to concatenate two Player names
