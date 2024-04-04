@@ -1,4 +1,5 @@
 #include <thread>
+#include <regex>
 #include "GameBoard.h"
 #include "Functions.h"
 #include "MenuFunctions.h"
@@ -6,22 +7,24 @@
 // Function to prompt the user for menu choice
 int getMenuChoice() {
     signed int choice;
-    
-    // Loop until a valid choice is entered
-    while (true) {
-        // Display the menu options
-        std::cout << "1. Start Game" << std::endl << "2. Instructions" << std::endl << "3. Scoreboard" << std::endl << "4. Quit Game" << std::endl;
-        std::cout << "\nEnter your choice: ";
-        std::cin >> choice;
+    std::string input;
 
-        // Validate the input
-        if (std::cin.fail() || choice < 1 || choice > 4) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    // Define the regex pattern for valid menu choice input
+    std::regex menuRegex("[1-4]");
+
+    while (true) {
+        std::cout << "1. Start Game\n2. Instructions\n3. Scoreboard\n4. Quit Game\n";
+        std::cout << "\nEnter your choice: ";
+        std::cin >> input;
+
+        // Check if the input matches the regex pattern
+        if (std::regex_match(input, menuRegex)) {
+            choice = std::stoi(input);
+            break;
+        }
+        else {
             system("cls");
             std::cout << "Invalid choice. Please enter a number between 1 and 4." << std::endl;
-        } else {
-            break;
         }
     }
     return choice;
