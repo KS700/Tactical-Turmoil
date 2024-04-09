@@ -1,5 +1,6 @@
 # How to Play the Game
 1. To clone the repository, click the green code button on the main repository screen, and copy the HTTPS link.
+   a. https://github.com/KS700/Tactical-Turmoil
 2. Open gitbash in the folder you would like to have the repository contents located.
 3. Within gitbash, type "git clone" and then paste the link that you copied in step 1. 
 4. Then hit enter in gitbash and it should begin loading the files.
