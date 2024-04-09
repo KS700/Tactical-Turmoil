@@ -1,5 +1,6 @@
 #ifndef SQUARE_H
 #define SQUARE_H
+
 #include "GameObject.h"
 
 // Square Class - Inheritance from GameObject

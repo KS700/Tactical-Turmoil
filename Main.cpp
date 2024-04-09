@@ -1,3 +1,6 @@
+// AERSP 424 Final Project
+// Made By: Keegan Scott, Bhavya Patel, and Garrett Varvil
+
 #include "MenuFunctions.h"
 #include "Player.h"
 #include "GameBoard.h"
