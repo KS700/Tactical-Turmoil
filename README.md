@@ -18,4 +18,4 @@
 1. Move the .zip file to the folder you would like the contents to be located.
 2. Right-click on the .zip file and select "Extract All...".
 3. Once the contents has been extracted to your project folder of choice, create another folder within that project folder called "Build".
-4. Then follow steps 6-12 from Option 1.
+4. Then follow steps 5-12 from Option 1.
