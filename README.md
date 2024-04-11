@@ -19,3 +19,11 @@
 2. Right-click on the .zip file and select "Extract All...".
 3. Once the contents has been extracted to your project folder of choice, create another folder within that project folder called "Build".
 4. Then follow steps 6-12 from Option 1.
+
+## Running the Executable application
+1. Once the steps above have been completed (Option 1 or 2) the .exe file (Application file type) can be used instead of Visual Studios.
+2. Start in the project folder the game is located in, from there open the following folders:
+   1. Build Folder
+   2. Debug Folder
+   3. "Tactical_Turmoil.exe" (Application)
+3. This will allow you to use "Tactical_Turmoil.exe" to run the game without needing to open Visual Studios.
